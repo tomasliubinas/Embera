@@ -10,7 +10,9 @@
  * file that was distributed with this source code.
  */
 
-class TestFakeResponse extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class TestFakeResponse extends TestCase
 {
     public function testResponse()
     {

@@ -10,7 +10,9 @@
  * file that was distributed with this source code.
  */
 
-class TestUrl extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class TestUrl extends TestCase
 {
     public function testInvalidPattern()
     {

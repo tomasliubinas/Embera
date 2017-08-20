@@ -10,7 +10,9 @@
  * file that was distributed with this source code.
  */
 
-class TestFormatter extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class TestFormatter extends TestCase
 {
     public function testTemplateArray()
     {
@@ -96,7 +98,7 @@ class TestFormatter extends PHPUnit_Framework_TestCase
 
     public function testSupportForDecoratedObjectAPI2()
     {
-        $this->setExpectedException('InvalidArgumentException');
+        $this->expectException('InvalidArgumentException');
 
         $embera = new \Embera\Embera(array('oembed' => false));
         $embera = new \Embera\Formatter($embera);

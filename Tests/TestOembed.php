@@ -10,7 +10,9 @@
  * file that was distributed with this source code.
  */
 
-class TestOembed extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class TestOembed extends TestCase
 {
     public function testResourceInfoOembedDisabled()
     {

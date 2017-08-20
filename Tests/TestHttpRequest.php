@@ -10,7 +10,9 @@
  * file that was distributed with this source code.
  */
 
-class TestHttpRequest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class TestHttpRequest extends TestCase
 {
     /**
      * This needs more execution time ..
@@ -18,7 +20,7 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
      */
     public function testInvalidUrl()
     {
-        $this->setExpectedException('Exception');
+        $this->expectException('Exception');
 
         $http = new \Embera\HttpRequest();
         $http->fetch('this is an invalid url');
@@ -30,7 +32,7 @@ class TestHttpRequest extends PHPUnit_Framework_TestCase
      */
     public function testInvalidUrl2()
     {
-        $this->setExpectedException('Exception');
+        $this->expectException('Exception');
 
         if (!ini_get('allow_url_fopen'))
         {
